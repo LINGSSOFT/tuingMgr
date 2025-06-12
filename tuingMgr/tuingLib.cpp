@@ -734,38 +734,34 @@ VOID MovePopupToSide(HWND hDlg, INT wx, INT wy) {
 
 // 클래스명으로 초기화 정보 배열의 위치를 찾는다. 
 INT FindWidgetClsIdx(LPCTSTR cls) {
-	for (INT wi = 0; ; wi++) {
+	for (INT wi = 0; wi < Count(arWidgetInfo); wi++) {
 		if (arWidgetInfo[wi].cls == _T("")) return -1;
 		if (arWidgetInfo[wi].cls == cls) return wi;
 	}
-
 	return -1;
 }
 
 INT FindWidgetNameIdx(LPCTSTR name) {
-	for (INT wi = 0; ; wi++) {
+	for (INT wi = 0; wi < Count(arWidgetInfo); wi++) {
 		if (arWidgetInfo[wi].cls == _T("")) return -1;
 		if (arWidgetInfo[wi].name == name) return wi;
 	}
-	
 	return -1;
 }
 
 INT FindTidgetClsIdx(LPCTSTR cls) {
-	for (INT ti = 0; ; ti++) {
+	for (INT ti = 0; ti < Count(arTidgetInfo); ti++) {
 		if (arTidgetInfo[ti].cls == _T("")) return -1;
 		if (arTidgetInfo[ti].cls == cls) return ti;
 	}
-
 	return -1;
 }
 
 INT FindTidgetNameIdx(LPCTSTR name) {
-	for (INT ti = 0; ; ti++) {
+	for (INT ti = 0; ti < Count(arTidgetInfo); ti++) {
 		if (arTidgetInfo[ti].cls == _T("")) return -1;
 		if (arTidgetInfo[ti].name == name) return ti;
 	}
-
 	return -1;
 }
 
@@ -862,6 +858,7 @@ VOID FixImageOrientation(Image* pImage) {
 		pImage->RotateFlip(Rotate270FlipNone);
 		break;
 	}
+	free(arPro); // 메모리 해제 추가
 }
 
 // 현재 모니터를 가득 채운다. 
@@ -946,7 +943,7 @@ LRESULT CALLBACK GrpScrlProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lPa
 	RECT crt, trt;
 	POINT pt;
 	static INT offset;
-	static HPEN hPen[5];
+	static HPEN hPen[5] = { NULL, NULL, NULL, NULL, NULL }; // 명시적 초기화 권장
 	INT i;
 	HBRUSH BackBrush, ThumbBrush, OldBrush;
 
@@ -1100,7 +1097,7 @@ LRESULT CALLBACK GrpScrlProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lPa
 		if (hPen[0]) {
 			for (i = 0; i < 5; i++) {
 				DeleteObject(hPen[i]);
-				hPen[0] = NULL;
+				hPen[i] = NULL; // 배열 전체를 NULL로 초기화
 			}
 		}
 		free(pData);

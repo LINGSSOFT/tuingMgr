@@ -1,9 +1,9 @@
 ﻿#pragma once
 // macro function
-#define Count(a) (sizeof(a)/sizeof(a[0]))
+#define Count(obj) (sizeof(obj)/sizeof(obj[0]))
 #define TextOutSz(h,x,y,t) TextOut(h,x,y,t,lstrlen(t));
-#define ABS(a) ((a) >= 0 ? (a):-(a))
-#define random(n) (rand()%(n))
+#define ABS(val) ((val) >= 0 ? (val):-(val))
+#define Random(n) (rand()%(n))
 
 // utility proto function
 VOID Trace(LPCTSTR format, ...);

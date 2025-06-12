@@ -2026,7 +2026,7 @@ INT CMusicPlayer::SelectRandomPlay() {
 
 	INT idx;
 	do {
-		idx = random(arMusic[playGroup].size());
+		idx = Random(arMusic[playGroup].size());
 	} while (playIdx == idx);
 
 	return idx;
@@ -2163,7 +2163,7 @@ LRESULT CImageSlide::OnTimer(WPARAM wParam, LPARAM lParam) {
 		INT oldIdx = nowIdx;
 		// 난수로 고르되 이전 사진과는 달라야 한다. 단 이미지가 하나밖에 없으면 할 수 없다.
 		for (;;) {
-			nowIdx = random(arImage.size());
+			nowIdx = Random(arImage.size());
 			if (arImage.size() == 1) break;
 			if (nowIdx != oldIdx) break;
 		}

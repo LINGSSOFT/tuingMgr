@@ -1126,7 +1126,7 @@ LRESULT CTetrisWin::OnKeyDown(WPARAM wParam, LPARAM lParam) {
 			score = 0;
 			bricknum = 0;
 			GameStatus = eTetStatus::RUNNING;
-			nbrick = random(sizeof(Shape) / sizeof(Shape[0]));
+			nbrick = Random(sizeof(Shape) / sizeof(Shape[0]));
 			MakeNewBrick();
 			Interval = 1000;
 			SetTimer(hBaseWnd, 1, Interval, NULL);
@@ -1218,7 +1218,7 @@ LRESULT CTetrisWin::OnKeyDown(WPARAM wParam, LPARAM lParam) {
 VOID CTetrisWin::MakeNewBrick() {
 	bricknum++;
 	brick = nbrick;
-	nbrick = random(sizeof(Shape) / sizeof(Shape[0]));
+	nbrick = Random(sizeof(Shape) / sizeof(Shape[0]));
 	nx = bw / 2;
 	ny = 3;
 	rot = 0;

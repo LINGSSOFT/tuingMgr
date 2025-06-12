@@ -145,12 +145,9 @@ BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMoni
 INT GetMonitorOfWindow(HWND hWnd) {
 	HMONITOR hMonitor;
 	hMonitor = MonitorFromWindow(hWnd, MONITOR_DEFAULTTONEAREST);
-	for (INT i = 0;; i++) {
-		if (arMonitor[i].hMonitor == hMonitor) {
-			return i;
-		}
+	for (INT i = 0; i < monitorCount; i++) {
+		if (arMonitor[i].hMonitor == hMonitor) return i;
 	}
-
 	return -1;
 }
 
@@ -179,7 +176,6 @@ class GrpBtnRegister {
 public:
 	GrpBtnRegister() {
 		WNDCLASS WndClass;
-
 		WndClass.cbClsExtra = 0;
 		WndClass.cbWndExtra = sizeof(LONG_PTR);
 		WndClass.hbrBackground = (HBRUSH)(COLOR_BTNFACE + 1);

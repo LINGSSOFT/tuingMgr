@@ -734,7 +734,7 @@ VOID MovePopupToSide(HWND hDlg, INT wx, INT wy) {
 
 // 클래스명으로 초기화 정보 배열의 위치를 찾는다. 
 INT FindWidgetClsIdx(LPCTSTR cls) {
-	for (INT wi = 0; wi < Count(arWidgetInfo); wi++) {
+	for (INT wi = 0; ; wi++) {
 		if (arWidgetInfo[wi].cls == _T("")) return -1;
 		if (arWidgetInfo[wi].cls == cls) return wi;
 	}
@@ -742,7 +742,7 @@ INT FindWidgetClsIdx(LPCTSTR cls) {
 }
 
 INT FindWidgetNameIdx(LPCTSTR name) {
-	for (INT wi = 0; wi < Count(arWidgetInfo); wi++) {
+	for (INT wi = 0; ; wi++) {
 		if (arWidgetInfo[wi].cls == _T("")) return -1;
 		if (arWidgetInfo[wi].name == name) return wi;
 	}
@@ -750,7 +750,7 @@ INT FindWidgetNameIdx(LPCTSTR name) {
 }
 
 INT FindTidgetClsIdx(LPCTSTR cls) {
-	for (INT ti = 0; ti < Count(arTidgetInfo); ti++) {
+	for (INT ti = 0; ; ti++) {
 		if (arTidgetInfo[ti].cls == _T("")) return -1;
 		if (arTidgetInfo[ti].cls == cls) return ti;
 	}
@@ -758,7 +758,7 @@ INT FindTidgetClsIdx(LPCTSTR cls) {
 }
 
 INT FindTidgetNameIdx(LPCTSTR name) {
-	for (INT ti = 0; ti < Count(arTidgetInfo); ti++) {
+	for (INT ti = 0; ; ti++) {
 		if (arTidgetInfo[ti].cls == _T("")) return -1;
 		if (arTidgetInfo[ti].name == name) return ti;
 	}

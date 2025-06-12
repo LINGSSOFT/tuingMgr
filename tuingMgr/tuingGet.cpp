@@ -22,6 +22,7 @@ CTuingGet* CTuingGet::CreateObject(wstring cls) {
 // 디폴트 오브젝트를 생성하고 초기 속성을 대입한다.
 CTuingGet* CTuingGet::CreateDefaultObject(wstring cls) {
 	CTuingGet* pTuingget = CreateObject(cls);
+	if (!pTuingget) return nullptr; // 생성 실패 시 방어
 
 	INT wi;
 	for (wi = 0;; wi++) {
@@ -1271,6 +1272,7 @@ DOUBLE CCalc::CalcPostfix(TCHAR* Post) {
 		} else {
 			// 연산자는 스택에서 두 수를 꺼내 연산하고 다시 푸시한다.
 			if (strchr("^*/+-", *p)) {
+				if (dS.GetTop() < 1) return FALSE; // 스택에 연산할 숫자가 부족하면 오류
 				right = dS.Pop();
 				left = dS.Pop();
 				switch (*p) {
@@ -1743,6 +1745,7 @@ LRESULT CMusicPlayer::OnCommand(WPARAM wParam, LPARAM lParam) {
 			}
 		}
 		SaveMusicList();
+		free(files); // 사용 후 반드시 해제
 		break;
 	case MP_CLEAR:
 		// 재생 중이면 일단 정지한다. 

@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\res">
+      <UniqueIdentifier>{07102933-4be6-4dcc-aaa4-9b2e3a158483}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuingMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuingGet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuingJet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuingLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="baseWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="externVar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tuingMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tuingGet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tuingJet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tuingLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="baseWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tuingMgr.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tuingMgr.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\calccopy_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\calccopy_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\calccopy_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\cliptext_off.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\cliptext_on.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\close_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\close_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\close_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\colortable.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="res\DefaultPrg.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\DefaultPrg.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="res\DefPrg.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\enumfont.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group1_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group1_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group2_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group2_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group3_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group3_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group4_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\group4_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\icon_blo.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\icon_war.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\lcdtest.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\menu_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\menu_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\menu_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\movecursor_off.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\movecursor_on.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mpadd_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mpadd_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mpadd_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mpclear_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mpclear_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mpclear_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mprandom_off.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\mprandom_on.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\next_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\next_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\next_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\oneimage.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\play_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\play_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\play_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\prev_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\prev_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\prev_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\prop_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\prop_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\prop_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\sizemeter.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\spy.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\stop_down.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\stop_hot.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\stop_up.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\swapmouse_off.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\swapmouse_on.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\tetris.bmp">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\trayicon.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="..\..\TuingApp\tuingApp\res\tuing.ico">
+      <Filter>Resource Files\res</Filter>
+    </Image>
+    <Image Include="res\tetris.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\swapmouse_on.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\swapmouse_off.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stop_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stop_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stop_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\spy.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sizemeter.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\prop_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\prop_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\prop_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\prev_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\prev_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\prev_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\play_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\play_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\play_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\oneimage.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\next_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\next_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\next_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mprandom_on.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mprandom_off.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mpclear_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mpclear_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mpclear_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mpadd_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mpadd_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mpadd_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\movecursor_on.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\movecursor_off.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\menu_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\menu_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\menu_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\lcdtest.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group4_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group4_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group3_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group3_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group2_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group2_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group1_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\group1_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\enumfont.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\colortable.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\close_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\close_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\close_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cliptext_on.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cliptext_off.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\calccopy_up.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\calccopy_hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\calccopy_down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\SizeHorz.cur">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="..\..\TuingApp\tuingApp\res\SizeHorz.cur">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\SizeVert.cur">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="..\..\TuingApp\tuingApp\res\SizeVert.cur">
+      <Filter>Resource Files\res</Filter>
+    </None>
+  </ItemGroup>
+</Project>

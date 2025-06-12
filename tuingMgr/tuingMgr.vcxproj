@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7b7ffb8a-4129-4585-9b92-f839bf41184d}</ProjectGuid>
+    <RootNamespace>tuingMgr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(SolutionDir)build\tuingSeries\client\$(Configuration)\$(PlatformTarget)\$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="baseWnd.h" />
+    <ClInclude Include="externVar.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tuingGet.h" />
+    <ClInclude Include="tuingJet.h" />
+    <ClInclude Include="tuingLib.h" />
+    <ClInclude Include="tuingMgr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="baseWnd.cpp" />
+    <ClCompile Include="tuingGet.cpp" />
+    <ClCompile Include="tuingJet.cpp" />
+    <ClCompile Include="tuingLib.cpp" />
+    <ClCompile Include="tuingMgr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tuingMgr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\TuingApp\tuingApp\res\calccopy_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\calccopy_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\calccopy_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\cliptext_off.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\cliptext_on.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\close_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\close_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\close_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\colortable.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\DefaultPrg.ico" />
+    <Image Include="..\..\TuingApp\tuingApp\res\enumfont.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group1_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group1_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group2_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group2_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group3_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group3_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group4_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\group4_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\icon_blo.ico" />
+    <Image Include="..\..\TuingApp\tuingApp\res\icon_war.ico" />
+    <Image Include="..\..\TuingApp\tuingApp\res\lcdtest.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\menu_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\menu_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\menu_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\movecursor_off.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\movecursor_on.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mpadd_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mpadd_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mpadd_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mpclear_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mpclear_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mpclear_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mprandom_off.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\mprandom_on.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\next_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\next_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\next_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\oneimage.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\play_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\play_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\play_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\prev_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\prev_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\prev_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\prop_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\prop_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\prop_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\sizemeter.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\spy.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\stop_down.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\stop_hot.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\stop_up.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\swapmouse_off.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\swapmouse_on.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\tetris.bmp" />
+    <Image Include="..\..\TuingApp\tuingApp\res\trayicon.ico" />
+    <Image Include="..\..\TuingApp\tuingApp\res\tuing.ico" />
+    <Image Include="res\calccopy_down.bmp" />
+    <Image Include="res\calccopy_hot.bmp" />
+    <Image Include="res\calccopy_up.bmp" />
+    <Image Include="res\cliptext_off.bmp" />
+    <Image Include="res\cliptext_on.bmp" />
+    <Image Include="res\close_down.bmp" />
+    <Image Include="res\close_hot.bmp" />
+    <Image Include="res\close_up.bmp" />
+    <Image Include="res\colortable.bmp" />
+    <Image Include="res\DefaultPrg.ico" />
+    <Image Include="res\DefPrg.ico" />
+    <Image Include="res\enumfont.bmp" />
+    <Image Include="res\group1_down.bmp" />
+    <Image Include="res\group1_up.bmp" />
+    <Image Include="res\group2_down.bmp" />
+    <Image Include="res\group2_up.bmp" />
+    <Image Include="res\group3_down.bmp" />
+    <Image Include="res\group3_up.bmp" />
+    <Image Include="res\group4_down.bmp" />
+    <Image Include="res\group4_up.bmp" />
+    <Image Include="res\lcdtest.bmp" />
+    <Image Include="res\menu_down.bmp" />
+    <Image Include="res\menu_hot.bmp" />
+    <Image Include="res\menu_up.bmp" />
+    <Image Include="res\movecursor_off.bmp" />
+    <Image Include="res\movecursor_on.bmp" />
+    <Image Include="res\mpadd_down.bmp" />
+    <Image Include="res\mpadd_hot.bmp" />
+    <Image Include="res\mpadd_up.bmp" />
+    <Image Include="res\mpclear_down.bmp" />
+    <Image Include="res\mpclear_hot.bmp" />
+    <Image Include="res\mpclear_up.bmp" />
+    <Image Include="res\mprandom_off.bmp" />
+    <Image Include="res\mprandom_on.bmp" />
+    <Image Include="res\next_down.bmp" />
+    <Image Include="res\next_hot.bmp" />
+    <Image Include="res\next_up.bmp" />
+    <Image Include="res\oneimage.bmp" />
+    <Image Include="res\play_down.bmp" />
+    <Image Include="res\play_hot.bmp" />
+    <Image Include="res\play_up.bmp" />
+    <Image Include="res\prev_down.bmp" />
+    <Image Include="res\prev_hot.bmp" />
+    <Image Include="res\prev_up.bmp" />
+    <Image Include="res\prop_down.bmp" />
+    <Image Include="res\prop_hot.bmp" />
+    <Image Include="res\prop_up.bmp" />
+    <Image Include="res\sizemeter.bmp" />
+    <Image Include="res\spy.bmp" />
+    <Image Include="res\stop_down.bmp" />
+    <Image Include="res\stop_hot.bmp" />
+    <Image Include="res\stop_up.bmp" />
+    <Image Include="res\swapmouse_off.bmp" />
+    <Image Include="res\swapmouse_on.bmp" />
+    <Image Include="res\tetris.bmp" />
+    <Image Include="small.ico" />
+    <Image Include="tuingMgr.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\TuingApp\tuingApp\res\SizeHorz.cur" />
+    <None Include="..\..\TuingApp\tuingApp\res\SizeVert.cur" />
+    <None Include="res\SizeHorz.cur" />
+    <None Include="res\SizeVert.cur" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

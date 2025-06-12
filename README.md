@@ -1,0 +1,2 @@
+# tuingMgr
+Windows application proto

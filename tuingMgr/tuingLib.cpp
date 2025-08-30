@@ -229,7 +229,7 @@ LRESULT CALLBACK GrpBtnProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lPar
 		EndPaint(hWnd, &ps);
 		return FALSE;
 	case WM_LBUTTONDOWN:
-		// 푸시 버튼은 DOWN으로, 체크 버튼은 토클
+		// 푸시 버튼은 DOWN으로, 체크 버튼은 토글
 		if ((GetWindowLongPtr(hWnd, GWL_STYLE) & GBS_CHECK) == 0) {
 			ChangeState(hWnd, GB_DOWN);
 		} else {

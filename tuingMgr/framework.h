@@ -5,6 +5,7 @@
 #pragma comment(lib, "gdiplus")
 #pragma comment(lib, "shlwapi.lib")
 #pragma comment(lib, "winmm.lib")
+#pragma comment(lib, "Shcore.lib")
 
 #include <windows.h>				// Windows Header Files
 #include <stdlib.h>					// C RunTime Header Files
@@ -25,6 +26,7 @@
 #include <gdiplus.h>
 #include <shlwapi.h>
 #include <mmsystem.h>
+#include <shellscalingapi.h>
 
 using namespace std;
 using namespace Gdiplus;

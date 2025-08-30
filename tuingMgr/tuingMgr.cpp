@@ -1788,6 +1788,9 @@ INT APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 		MessageBox(NULL, _T("not matching, download new version"), _T("버전"), MB_OK);
 	}
 
+	SetProcessDpiAwareness(PROCESS_PER_MONITOR_DPI_AWARE);
+	// 또는 최신 Windows라면 SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
+
 	mainWindow.Create();
 	::ShowWindow(mainWindow.hBaseWnd, nCmdShow);
 

@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 // 클래스명으로부터 위젯 객체 생성. 타입명과 객체를 연결한다.
 CTuingGet* CTuingGet::CreateObject(wstring cls) {
@@ -136,7 +136,7 @@ LRESULT CClock::OnTimer(WPARAM wParam, LPARAM lParam) {
 	static TCHAR arYoil[][4] = { _T("일"), _T("월"), _T("화"), _T("수"),
 		_T("목"), _T("금"), _T("토") };
 	static TCHAR arYoilEng[][16] = { _T("Sun"), _T("Mon"), _T("Tue"),
-		_T("Wen"), _T("Thr"), _T("Fri"), _T("Sat") };
+		_T("Wed"), _T("Thu"), _T("Fri"), _T("Sat") };
 
 	month = st.wMonth;
 	day = st.wDay;
@@ -1933,6 +1933,7 @@ VOID CMusicPlayer::LoadMusicList() {
 	TCHAR oneFile[MAX_PATH];
 	TCHAR key[32];
 
+	// 최대 1000개 정도이나 실제로는 더 됨. 평균 5000개는 충분히 될 듯 함.
 	INT bufSize = MAX_PATH * 1000 * sizeof(TCHAR);
 	buf = (TCHAR*)malloc(bufSize);
 	for (INT group = 0; group < 4; group++) {
@@ -1959,7 +1960,7 @@ VOID CMusicPlayer::SaveMusicList() {
 	for (INT group = 0; group < 4; group++) {
 		num = static_cast<INT>(arMusic[group].size());
 		if (num == 0) {
-			// 음악이 하나도 없으면 빈 문자열 분량이라도 할당해서 기록해야 한다.
+			// 음악이 하나도 없으면 빈 문자열 분량이라도 할당해서 기록해야 한다. 
 			buf = (TCHAR*)calloc(128, sizeof(TCHAR));
 		} else {
 			buf = (TCHAR*)calloc(MAX_PATH * num, sizeof(TCHAR));
@@ -2780,7 +2781,7 @@ LRESULT CMemoViewer::OnCreate(WPARAM wParam, LPARAM lParam) {
 
 	HDC hdc = GetDC(NULL);
 	fontEdit = CreateFont(pMemo->fontSize * GetDeviceCaps(hdc, LOGPIXELSY) / 72,
-		0, 0, 0, 0, 0, 0, 0, HANGUL_CHARSET, 3, 2, 1,
+		0, 0, 0, FW_BOLD, 0, 0, 0, HANGUL_CHARSET, 3, 2, 1,
 		VARIABLE_PITCH | FF_MODERN, pMemo->fontFace);
 	ReleaseDC(NULL, hdc);
 	SendMessage(hEdit, WM_SETFONT, (WPARAM)fontEdit, MAKELPARAM(FALSE, 0));
@@ -2960,7 +2961,7 @@ LRESULT CMemoViewer::OnCommand(WPARAM wParam, LPARAM lParam) {
 			DeleteObject(fontEdit);
 			HDC hdc = GetDC(NULL);
 			fontEdit = CreateFont(pMemo->fontSize * GetDeviceCaps(hdc, LOGPIXELSY) / 72,
-				0, 0, 0, 0, 0, 0, 0, HANGUL_CHARSET, 3, 2, 1,
+				0, 0, 0, FW_BOLD, 0, 0, 0, HANGUL_CHARSET, 3, 2, 1,
 				VARIABLE_PITCH | FF_MODERN, pMemo->fontFace);
 			ReleaseDC(NULL, hdc);
 			SendMessage(hEdit, WM_SETFONT, (WPARAM)fontEdit, MAKELPARAM(FALSE, 0));
@@ -3063,7 +3064,7 @@ VOID CDday::OnDraw(HDC hdc, INT width, INT height) {
 	if (targetTitle == _T("")) {
 		RECT crt = { 0, 0, width, height };
 		InflateRect(&crt, -2, -5);
-		SetTextColor(hdc, GetColorFromName(_T("OrangeRed")));
+		SetTextColor(hdc, RGB(255, 255, 0));
 		oldFont = (HFONT)SelectObject(hdc, mainFont[1]);
 		LPCTSTR mes = _T("Dday 카운터\r\n마우스 오른쪽 버튼을 눌러 목표 날짜와 제목을 설정해라.");
 		DrawText(hdc, mes, -1, &crt, DT_WORDBREAK);
@@ -3089,7 +3090,7 @@ VOID CDday::OnDraw(HDC hdc, INT width, INT height) {
 
 	oldFont = (HFONT)SelectObject(hdc, mainFont[fontIndex]);
 	SetTextAlign(hdc, TA_CENTER);
-	SetTextColor(hdc, GetColorFromName(_T("Blue")));
+	SetTextColor(hdc, RGB(255, 0, 0));
 	TextOutVCenter(hdc, width / 2, height / 2 + 10, remain);
 	SelectObject(hdc, oldFont);
 }
@@ -3674,7 +3675,7 @@ VOID CCalendar::DrawMonth(HDC hdc, INT width, INT year, INT month, INT xpos, INT
 	static TCHAR arYoil[][4] = { _T("일"), _T("월"), _T("화"), _T("수"),
 		_T("목"), _T("금"), _T("토") };
 	static TCHAR arYoilEng[][16] = { _T("Sun"), _T("Mon"), _T("Tue"),
-		_T("Wen"), _T("Thr"), _T("Fri"), _T("Sat") };
+		_T("Wed"), _T("Thu"), _T("Fri"), _T("Sat") };
 	TCHAR head[128];
 	TCHAR day[128];
 	RECT drt;

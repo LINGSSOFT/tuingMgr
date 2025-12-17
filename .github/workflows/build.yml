@@ -1,4 +1,4 @@
-name: build
+name: build - release x86
 
 # 수동 실행용 워크플로. push/PR 자동 트리거를 제거했습니다.
 on:

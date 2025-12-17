@@ -17,6 +17,7 @@
 mono_crash.*
 
 # Build results
+build
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -390,6 +391,8 @@ FodyWeavers.xsd
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/build.ps1
+!.vscode/c_cpp_properties.json
 *.code-workspace
 
 # Local History for Visual Studio Code

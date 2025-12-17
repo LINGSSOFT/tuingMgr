@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch tuingMgr (Debug x86)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/tuingSeries/clientDebugWin32/tuingMgr.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/tuingSeries/clientDebugWin32",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build Debug x86"
+        },
+        {
+            "name": "Launch tuingMgr (Release x86)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/tuingSeries/clientReleaseWin32/tuingMgr.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/tuingSeries/clientReleaseWin32",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build Release x86"
+        }
+    ]
+}

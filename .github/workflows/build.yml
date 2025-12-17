@@ -1,0 +1,28 @@
+name: build
+
+# 수동 실행용 워크플로. push/PR 자동 트리거를 제거했습니다.
+on:
+  workflow_dispatch:
+
+jobs:
+  windows-msbuild:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add MSBuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      # NuGet 패키지가 필요 없으면 이 단계를 삭제하세요.
+      - name: Restore
+        run: nuget restore TuingMgr.sln
+
+      - name: Build Win32 Release
+        run: msbuild TuingMgr.sln /p:Configuration=Release /p:Platform=Win32 /m
+
+      - name: Upload exe artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tuingMgr-win32-release
+          path: build/tuingSeries/clientReleaseWin32/tuingMgr.exe

@@ -18,11 +18,11 @@ jobs:
       - name: Restore
         run: nuget restore TuingMgr.sln
 
-      - name: Build Win32 Release
-        run: msbuild TuingMgr.sln /p:Configuration=Release /p:Platform=Win32 /m
+      - name: Build x86 Release
+        run: msbuild TuingMgr.sln /p:Configuration=Release /p:Platform=x86 /m
 
       - name: Upload exe artifact
         uses: actions/upload-artifact@v4
         with:
-          name: tuingMgr-win32-release
-          path: build/tuingSeries/clientReleaseWin32/tuingMgr.exe
+          name: tuingMgr-x86-release
+          path: build/tuingSeries/clientReleasex86/tuingMgr.exe

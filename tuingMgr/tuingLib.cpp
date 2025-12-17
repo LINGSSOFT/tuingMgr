@@ -36,7 +36,8 @@ VOID WriteLog(LPCTSTR strLog, ...) {
 	_stprintf_s(strLog2, Count(strLog2), _T("카운터=%06d(%d:%d:%d:%d) %s\r\n"), count++,
 		st.wHour, st.wMinute, st.wSecond, st.wMilliseconds, szLog);
 	SetFilePointer(hLog, 0, NULL, FILE_END);
-	WriteFile(hLog, strLog2, lstrlen(strLog2), &dwWritten, NULL);
+	// lstrlen returns characters; write requires bytes when using wide chars.
+	WriteFile(hLog, strLog2, lstrlen(strLog2) * sizeof(TCHAR), &dwWritten, NULL);
 	CloseHandle(hLog);
 }
 #else
